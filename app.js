@@ -21,6 +21,10 @@ var Blog = mongoose.model("Blog", blogSchema);
 
 // RESTFUL ROUTES
 
+app.get("/blogs", function(req, res) {
+  res.render("index");
+});
+
 app.listen(3000, function() {
   console.log("SERVER IS RUNNING");
 });
