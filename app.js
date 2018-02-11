@@ -4,3 +4,4 @@ var express = require("express"),
     mongoose = require("mongoose");
 
 mongoose.connect("mongodb://localhost/restful_blog_app");
+app.set("view engine", "ejs");
