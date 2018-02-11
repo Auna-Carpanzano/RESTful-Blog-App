@@ -3,11 +3,13 @@ var express = require("express"),
     bodyParser = require("body-parser"),
     mongoose = require("mongoose");
 
+// APP CONFIG
 mongoose.connect("mongodb://localhost/restful_blog_app");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
+// MONGOOSE/MODEL CONFIG
 var blogSchema = new mongoose.Schema ({
   title: String,
   image: String,
@@ -16,6 +18,8 @@ var blogSchema = new mongoose.Schema ({
 });
 
 var Blog = mongoose.model("Blog", blogSchema);
+
+// RESTFUL ROUTES
 
 app.listen(3000, function() {
   console.log("SERVER IS RUNNING");
