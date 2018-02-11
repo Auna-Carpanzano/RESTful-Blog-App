@@ -15,6 +15,8 @@ var blogSchema = new mongoose.Schema ({
   created: {type: Date, default: Date.now}
 });
 
+var Blog = mongoose.model("Blog", blogSchema);
+
 app.listen(3000, function() {
   console.log("SERVER IS RUNNING");
 });
