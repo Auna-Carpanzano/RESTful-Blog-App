@@ -15,8 +15,10 @@
             <div class="meta">
               <span><%= blog.created.toDateString() %></span>
             </div>
+            <div class="description">
+              <p><%- blog.body.substring(0, 100) %>...</p>
+            </div>
           </div>
-         <p><%= blog.body.substring(0, 100) %>...</p>
          <a href="/blogs/<%=blog._id %>">Read More</a>
        </div>
       <%  }); %>
