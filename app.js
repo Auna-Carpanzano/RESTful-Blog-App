@@ -11,6 +11,7 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
+app.use(expressSanitizer());
 
 // MONGOOSE/MODEL CONFIG
 var blogSchema = new mongoose.Schema ({
